@@ -16,7 +16,7 @@ var screenHeight;
 gameInitialize();
 snakeInitialize();
 foodInitialize();
-setInterval(gameLoop, 200);
+setInterval(gameLoop, 90);
 /*-----------------------------------------------------------------------------
  * Functions- tell website what to do and can be used whenever.(these are game ones)
  * ----------------------------------------------------------------------------
@@ -149,5 +149,16 @@ function snakeUpdate(){
       if(event.keyCode == "40") {
           snakeDirection = "down";
       }
-        
+      
+         
+          if(event.keyCode == "38") {
+              snakeDirection = "up";
+          }
+       
+       if (event.keyCode == "37") {
+           snakeDirection = "left";
+       }
+    
     }
+    
+    
