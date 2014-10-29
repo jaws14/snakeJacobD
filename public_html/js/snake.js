@@ -11,6 +11,7 @@ var screenWidth;
 var screenHeight;
 
 var gameState;
+var gameOverMenu;
 /*-----------------------------------------------------------------------------
  * Function Callers- tell functions to activate.
  * ----------------------------------------------------------------------------
@@ -35,6 +36,8 @@ function gameInitialize(){
     canvas.height = screenHeight;
     
     document.addEventListener("keydown", keyboardHandler);
+    
+    gameOverMenu = document.getElementById("gameOver");
     
     setState("PLAY");
    
@@ -189,4 +192,15 @@ function snakeUpdate(){
  
  function setState(state) {
      gameState = state;
+     showMenu(state);
+ }
+ 
+ function displayMenu(menu) {
+     menu.style.visibility = "visible";
+ }
+ 
+ function showMenu(state) {
+     if(state == "GAME OVER") {
+         displayMenu(gameOverMenu);
+     }
  }
