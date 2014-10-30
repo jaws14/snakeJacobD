@@ -19,7 +19,7 @@ var gameOverMenu;
 gameInitialize();
 snakeInitialize();
 foodInitialize();
-setInterval(gameLoop, 90);
+setInterval(gameLoop, 30);
 /*-----------------------------------------------------------------------------
  * Functions- tell website what to do and can be used whenever.(these are game ones)
  * ----------------------------------------------------------------------------
